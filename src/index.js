@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const search = document.querySelector(".magnify-glass");
   search.addEventListener("click", () => {
-    console.log("submitted");
     locationToday();
     locationTom();
   });
@@ -21,9 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const userInput = document.querySelector(".text");
   userInput.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
+      event.preventDefault();
+      userInput.blur();
       locationToday();
       locationTom();
-      console.log("enter key pressed");
     }
   });
 });

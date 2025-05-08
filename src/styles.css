@@ -28,6 +28,9 @@ header {
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
 }
 
 .search {
@@ -45,9 +48,16 @@ header {
 }
 
 label {
+  display: flex;
+  flex-wrap: nowrap;
   margin-right: 5px;
+  align-self: center;
 }
 
+.searchText {
+  display: flex;
+  flex-wrap: nowrap;
+}
 input[type="text"] {
   width: 200px;
   height: 15px;
@@ -285,18 +295,31 @@ footer {
   align-items: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   body {
     display: flex;
     flex-direction: column;
   }
 
+  label {
+    display: block;
+  }
+  .magnify-glass {
+    display: none;
+  }
   footer {
     width: 90%;
   }
 }
 
 @media (max-width: 600px) and (orientation: portrait) {
+  header {
+    flex-wrap: wrap;
+  }
+  label {
+    flex-wrap: wrap;
+    align-self: center;
+  }
   .weather-reports {
     display: flex;
     flex-direction: column;
@@ -306,7 +329,19 @@ footer {
   }
 }
 
-@media (max-width: 430px) and (orientation: portrait) {
+@media (max-width: 500px) and (orientation: portrait) {
+  header {
+    width: 60%;
+  }
+
+  .search {
+    width: 70%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
   footer {
     display: flex;
     flex-wrap: nowrap;
@@ -314,3 +349,9 @@ footer {
     align-items: center;
   }
 }
+
+/*
+}
+
+@media (max-width: 320px) and (orientation: portrait) {
+*/
