@@ -1,0 +1,286 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  width: 100vw;
+  /*overflow: hidden; /* Hide scrollbars */
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e2e8f0;
+  background-color: #a8b2c3;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+header {
+  margin-top: 10px;
+  padding: 10px;
+  place-self: center;
+  width: 80%;
+  background-color: #6d6e74;
+  color: white;
+  font-size: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+.search {
+  padding: 10px;
+  place-self: center;
+  width: 80%;
+  background-color: #6d6e74;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  margin-right: 5px;
+}
+
+input[type="text"] {
+  width: 200px;
+  height: 15px;
+  padding: 12px 20px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 0%;
+  background-color: #e2e8f0;
+  padding-right: 0%;
+}
+
+input:focus {
+  background-color: white;
+}
+
+.clear {
+  width: 25px;
+  height: 24px;
+  background-color: #e2e8f0;
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.magnify-glass {
+  place-self: center;
+  transition: transform 2s;
+}
+
+.magnify-glass:hover {
+  transform: translate(30px) scale(5) rotate(360deg);
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.location {
+  background-color: white;
+  border-radius: 5px;
+  border-color: darkblue;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-self: center;
+  color: darkblue;
+  padding: 5px;
+}
+
+.weather-reports {
+  width: 100%;
+  background-color: #e2e8f0;
+  display: flex;
+  gap: 5px;
+  color: darkblue;
+}
+
+.todayReport {
+  flex-grow: 1;
+  grid-area: tod;
+  background-color: lightgray;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  padding: 5px;
+  display: grid;
+  grid-template-rows: 25px 1fr 30px;
+}
+
+.todayDate {
+  width: 35%;
+  padding-left: 5px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: large;
+  display: flex;
+  margin-bottom: 5px;
+  color: darkblue;
+}
+
+.report {
+  width: 100%;
+  /*background-color: rgb(141, 198, 247);*/
+  /*background-color: #a8b2c3;*/
+  background-color: #6d6e74;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: repeat(16, auto);
+  align-items: center;
+  color: white;
+}
+
+.report .title {
+  width: 115px;
+  place-self: center;
+}
+
+.report div {
+  width: 50px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.report .period {
+  width: 50px;
+  height: 20px;
+}
+
+.description {
+  background-color: white;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  color: darkblue;
+  display: flex;
+  align-items: center;
+}
+
+.tomorrowReport {
+  flex-grow: 1;
+  grid-area: tom;
+  background-color: lightgray;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  padding: 5px;
+  display: grid;
+  grid-template-rows: 25px 1fr 30px;
+}
+
+.tomorrowDate {
+  width: 35%;
+  padding-left: 5px;
+  /*background-color: #1992d4;*/
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: large;
+  display: flex;
+  margin-bottom: 5px;
+
+  color: darkblue;
+}
+
+.reportForTomorrow {
+  width: 100%;
+  background-color: #6d6e74;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: repeat(16, auto);
+  align-items: center;
+  color: white;
+}
+
+.reportForTomorrow .tomorrowTitle {
+  width: 115px;
+  place-self: center;
+}
+
+.reportForTomorrow div {
+  width: 50px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.reportForTomorrow .tomPeriod {
+  width: 50px;
+  height: 20px;
+}
+
+.tomorrowDescription {
+  background-color: white;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  color: darkblue;
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  gap: 50px;
+}
+
+.acks {
+  position: relative;
+}
+
+.acks .acksText {
+  visibility: hidden;
+  width: 350px;
+  background-color: white;
+  color: darkblue;
+  text-align: center;
+  padding: 5px 0;
+  border: 2px solid black;
+  border-radius: 6px;
+  position: absolute;
+  bottom: 100%; /* this positions below the text about its parent, i.e., .ackss */
+  /* this centres it horizontally. NB there is no need for margin-left */
+  transform: translateX(
+    -50%
+  ); /* this offsets the left 50% to truly center it */
+  z-index: 1;
+}
+
+.acks:hover .acksText {
+  visibility: visible;
+}
+
+.logo {
+  justify-content: end;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* MEDIA query - have scrollbars within the report section? */
