@@ -17,6 +17,7 @@ main {
 }
 
 header {
+  border-left: 8px solid lightgray;
   margin-top: 10px;
   padding: 10px;
   place-self: center;
@@ -30,6 +31,7 @@ header {
 }
 
 .search {
+  border-left: 8px solid lightgray;
   padding: 10px;
   place-self: center;
   width: 80%;
@@ -124,7 +126,6 @@ img {
 }
 
 .todayDate {
-  width: 35%;
   padding-left: 5px;
   background-color: white;
   border-radius: 5px;
@@ -133,6 +134,8 @@ img {
   display: flex;
   margin-bottom: 5px;
   color: darkblue;
+  text-align: center;
+  justify-content: center;
 }
 
 .report {
@@ -189,7 +192,6 @@ img {
 }
 
 .tomorrowDate {
-  width: 35%;
   padding-left: 5px;
   /*background-color: #1992d4;*/
   border-radius: 5px;
@@ -198,7 +200,7 @@ img {
   font-size: large;
   display: flex;
   margin-bottom: 5px;
-
+  justify-content: center;
   color: darkblue;
 }
 
@@ -283,4 +285,32 @@ footer {
   align-items: center;
 }
 
-/* MEDIA query - have scrollbars within the report section? */
+@media (max-width: 900px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  .weather-reports {
+    display: flex;
+    flex-direction: column;
+  }
+  .logo {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 430px) and (orientation: portrait) {
+  footer {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    align-items: center;
+  }
+}
